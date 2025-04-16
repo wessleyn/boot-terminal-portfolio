@@ -1,0 +1,57 @@
+---
+layout: with-analytics.njk
+title: Neon Sun - Analytics Dashboard
+projectName: Neon Sun
+projectSlug: neon-sun
+projectSummary: A powerful analytics dashboard for tracking user engagement and app performance
+projectOverview: "Neon Sun is a customizable analytics dashboard designed to visualize user engagement metrics and
+application performance in real-time. The dashboard provides intuitive visual representations of complex data, enabling
+teams to make data-driven decisions efficiently."
+projectImage: project3.webp
+technologies:
+- React
+- D3.js
+- Node.js
+- Express
+- MongoDB
+- WebSockets
+features:
+- Real-time data visualization with live updates
+- Customizable dashboard layouts for different team roles
+- Historical data comparison and trend analysis
+- Automated alerts based on metric thresholds
+- Export capabilities for reports and presentations
+challenges:
+- "Optimizing performance for real-time data updates was challenging. We implemented WebSocket connections with data
+batching to minimize browser rendering overhead while keeping visualizations current."
+- "Creating responsive and accessible visualizations required careful consideration of color schemes and interaction
+patterns. We developed a custom theme system that adapts to user preferences and accessibility needs."
+prevProject: project-2
+nextProject: project-4
+githubUrl: https://github.com/example/neon-sun
+demoUrl: https://neon-sun-demo.netlify.app
+
+# Chart data (simplified - actual chart drawing logic is now in the template)
+chartType: line
+chartLabels:
+- Jan
+- Feb
+- Mar
+- Apr
+- May
+- Jun
+- Jul
+- Aug
+chartData:
+- 0
+- 100
+- 50
+- 150
+- 100
+- 200
+- 150
+- 250
+chartTitle: User Growth
+chartColor: "#ff5fd7"
+chartDescription: Monthly user growth trends showing consistent increase with seasonal fluctuations
+---

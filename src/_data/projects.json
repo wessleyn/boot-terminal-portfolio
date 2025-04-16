@@ -1,0 +1,71 @@
+[
+    {
+        "id": "project-1",
+        "title": "E-commerce Platform",
+        "description": "An e-commerce platform built with React, Node.js, and MongoDB. Featuring user authentication, product management, and payment processing.",
+        "image": "/assets/img/projects/project1.webp",
+        "tags": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ],
+        "featured": true
+    },
+    {
+        "id": "project-2",
+        "title": "Portfolio Website",
+        "description": "A responsive portfolio website built with modern web technologies.",
+        "image": "/assets/img/projects/project2.webp",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "featured": true
+    },
+    {
+        "id": "project-3",
+        "title": "Task Management App",
+        "description": "A task management application with drag-and-drop functionality.",
+        "image": "/assets/img/projects/project3.webp",
+        "tags": [
+            "Vue.js",
+            "Firebase"
+        ],
+        "featured": true
+    },
+    {
+        "id": "project-4",
+        "title": "Weather Dashboard",
+        "description": "A weather dashboard that displays current and forecasted weather data.",
+        "image": "/assets/img/projects/project4.webp",
+        "tags": [
+            "JavaScript",
+            "API Integration"
+        ],
+        "featured": true
+    },
+    {
+        "id": "project-5",
+        "title": "Mobile App",
+        "description": "A cross-platform mobile application built with React Native.",
+        "image": "/assets/img/projects/project5.webp",
+        "tags": [
+            "React Native",
+            "Firebase"
+        ],
+        "featured": true
+    },
+    {
+        "id": "project-6",
+        "title": "Blog Platform",
+        "description": "A full-featured blog platform with user authentication and content management.",
+        "image": "/assets/img/projects/project5.webp",
+        "tags": [
+            "Next.js",
+            "Prisma",
+            "PostgreSQL"
+        ],
+        "featured": false
+    }
+]

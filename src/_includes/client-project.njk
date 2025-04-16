@@ -1,0 +1,116 @@
+---
+layout: base.njk
+showHireButton: false
+---
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb terminal-breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">~</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">client-projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ projectSlug }}</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h2 class="fs-3 fw-bold text-primary terminal-cursor">$ ls {{ clientName }}-{{ projectName }}/</h2>
+<p class="mb-4">{{ projectSummary }}</p>
+
+<div class="project-image-container mb-4">
+    <img class="img-fluid border rounded border-0 shadow-sm w-100"
+        src="{{ '/' | url }}assets/img/projects/{{ projectImage }}" alt="{{ title }} Screenshot">
+</div>
+
+<div class="project-details mb-5">
+    <h3 class="fs-5 fw-bold">Project Overview</h3>
+    <p>{{ projectOverview }}</p>
+
+    <div class="client-details mb-4 p-3 bg-dark border rounded">
+        <h4 class="fs-6 fw-bold text-primary">Client</h4>
+        <p>{{ clientDescription }}</p>
+        {% if clientWebsite %}
+        <a href="{{ clientWebsite }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">
+            Visit Client Website
+        </a>
+        {% endif %}
+    </div>
+
+    <h3 class="fs-5 fw-bold">Technologies Used</h3>
+    <div class="tech-stack mb-4">
+        {% for tech in technologies %}
+        <span class="badge bg-primary me-2 mb-2">{{ tech }}</span>
+        {% endfor %}
+    </div>
+
+    <h3 class="fs-5 fw-bold">Key Features</h3>
+    <ul class="terminal-list">
+        {% for feature in features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3 class="fs-5 fw-bold">Challenges & Solutions</h3>
+    {% for challenge in challenges %}
+    <p>{{ challenge }}</p>
+    {% endfor %}
+
+    {% if testimonial %}
+    <div class="testimonial my-4 p-3 bg-dark border rounded">
+        <h4 class="fs-6 fw-bold text-primary">Client Testimonial</h4>
+        <blockquote class="ps-3 border-start border-2 border-primary">
+            <p class="mb-2">{{ testimonial.quote }}</p>
+            <footer class="text-muted">— {{ testimonial.author }}, {{ testimonial.position }}</footer>
+        </blockquote>
+    </div>
+    {% endif %}
+
+    {% if demoUrl %}
+    <h3 class="fs-5 fw-bold">Project Link</h3>
+    <div class="d-flex flex-wrap">
+        <a href="{{ demoUrl }}" target="_blank" rel="noopener" class="btn btn-outline-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-link-45deg me-2">
+                <path
+                    d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z">
+                </path>
+                <path
+                    d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z">
+                </path>
+            </svg>
+            View Project
+        </a>
+    </div>
+    {% endif %}
+</div>
+
+<div class="project-navigation mt-5">
+    <div class="d-flex justify-content-between">
+        {% if prevProject %}
+        <a href="{{ '/' | url }}client-projects/{{ prevProject }}" class="btn btn-outline-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-arrow-left me-2">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z">
+                </path>
+            </svg>Previous Project
+        </a>
+        {% else %}
+        <span></span> <!-- Placeholder for layout balance -->
+        {% endif %}
+
+        {% if nextProject %}
+        <a href="{{ '/' | url }}client-projects/{{ nextProject }}" class="btn btn-primary-dragient">Next Project
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-arrow-right ms-2">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
+                </path>
+            </svg>
+        </a>
+        {% else %}
+        <span></span> <!-- Placeholder for layout balance -->
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

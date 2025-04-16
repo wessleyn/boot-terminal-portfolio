@@ -1,0 +1,17 @@
+{
+  "name": "boot-terminal-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive developer portfolio website built with Bootstrap 5, featuring a terminal-inspired theme.",
+  "main": "index.js",
+  "scripts": {
+    "start": " eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
