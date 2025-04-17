@@ -1,0 +1,3 @@
+[submodule "decap-proxy"]
+	path = decap-proxy
+	url = https://github.com/sterlingwes/decap-proxy.git
