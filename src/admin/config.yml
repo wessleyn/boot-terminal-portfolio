@@ -2,13 +2,13 @@ backend:
   name: github
   repo: wessleyn/boot-terminal-portfolio
   branch: main
-  site_url: https://wessleyn.me
+  site_domain: https://wessleyn.me
   display_url: https://wessleyn.me
   base_url: https://wessleyn.me
   logo_url: https://wessley.me/assets/img/apple-touch-icon.png
 
-media_folder: "src/assets/img/projects"
-public_folder: "/assets/img/projects"
+media_folder: src/assets/img/projects
+public_folder: /assets/img/projects
 
 media_library:
   name: default
