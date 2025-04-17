@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: wessleyn/boot-terminal-portfolio
+  name: git-gateway
   branch: main
   site_domain: https://wessleyn.me
   display_url: https://wessleyn.me

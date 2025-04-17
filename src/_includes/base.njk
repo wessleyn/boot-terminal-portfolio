@@ -29,6 +29,8 @@
         href="https://fonts.googleapis.com/css?family=Azeret+Mono:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="{{ '/' | url }}assets/css/baguetteBox.min.css">
     <link rel="stylesheet" href="{{ '/' | url }}assets/css/terminal-theme.css">
+    <!-- Add Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% block head %}{% endblock %}
 </head>
 
@@ -130,6 +132,19 @@
                 typeWriter();
             });
         });
+    </script>
+
+    <!-- Netlify Identity redirect script -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", (user) => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 
     {% block scripts %}{% endblock %}
