@@ -1,57 +1,51 @@
 ---
-layout: with-analytics.njk
-title: Neon Sun - Analytics Dashboard
-projectName: Neon Sun
-projectSlug: project-3
-projectSummary: A powerful analytics dashboard for tracking user engagement and app performance
-projectOverview: "Neon Sun is a customizable analytics dashboard designed to visualize user engagement metrics and
-application performance in real-time. The dashboard provides intuitive visual representations of complex data, enabling
-teams to make data-driven decisions efficiently."
-projectImage: project3.webp
-technologies:
-- React
-- D3.js
-- Node.js
-- Express
-- MongoDB
-- WebSockets
-features:
-- Real-time data visualization with live updates
-- Customizable dashboard layouts for different team roles
-- Historical data comparison and trend analysis
-- Automated alerts based on metric thresholds
-- Export capabilities for reports and presentations
-challenges:
-- "Optimizing performance for real-time data updates was challenging. We implemented WebSocket connections with data
-batching to minimize browser rendering overhead while keeping visualizations current."
-- "Creating responsive and accessible visualizations required careful consideration of color schemes and interaction
-patterns. We developed a custom theme system that adapts to user preferences and accessibility needs."
-prevProject: project-2
-nextProject: project-4
-githubUrl: https://github.com/example/neon-sun
-demoUrl: https://neon-sun-demo.netlify.app
+layout: full-project.njk
 
-# Chart data (simplified - actual chart drawing logic is now in the template)
-chartType: line
-chartLabels:
-- Jan
-- Feb
-- Mar
-- Apr
-- May
-- Jun
-- Jul
-- Aug
-chartData:
-- 0
-- 100
-- 50
-- 150
-- 100
-- 200
-- 150
-- 250
-chartTitle: User Growth
-chartColor: "#ff5fd7"
-chartDescription: Monthly user growth trends showing consistent increase with seasonal fluctuations
+title: "Project: Job Butler - Wessley Nyakanyanga"
+description: "An AI-powered job application assistant that matches, applies, and tracks opportunities on your behalf."
+keywords: "job assistant, AI, automation, career, employment, resume"
+
+ogTitle: "Job Butler by Wessley Nyakanyanga"
+ogDescription: "An AI-powered assistant automating job matching, tailored applications, and status tracking."
+ogImage: "/assets/img/projects/butler.png"
+ogUrl: "https://wessleyn.me/projects/project-4.html"
+canonical: "https://wessleyn.me/projects/project-4.html"
+
+projectSlug: "project-3"
+projectName: "Job Butler"
+shortDescription: "An AI-powered job application assistant"
+releaseDate: "May 2025"
+
+projectSummary: "An AI-powered job assistant automating applications while you sleep."
+projectImage: "butler.png"
+
+projectOverview: |
+  Job Butler is an AI-driven assistant designed to streamline your job search.
+  It analyzes your profile, matches you with relevant openings, auto-submits tailored applications,
+  and provides real-time updates on application status—all while you sleep.
+
+technologies:
+  - Next.js 15
+  - Nuxt.js
+  - Prisma
+  - Supabase
+  - TypeScript
+  - GROQ API
+  - Auth.js
+  - ...many more
+
+features:
+  - Automated job matching and recommendations
+  - Resume and cover letter customization
+  - One-click application submissions across platforms
+  - Real-time status tracking and notifications
+  - Interview scheduling assistance
+  - Dashboard with application analytics
+
+challenges:
+  - Integrating multiple job board APIs reliably under varying rate limits and data formats.
+  - Ensuring secure authentication and data privacy for user profiles and application data.
+
+githubUrl: "https://github.com/wessleyn/job-butler"
+demoUrl: "https://jobbutler.live"
 ---

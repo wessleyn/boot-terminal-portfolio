@@ -29,6 +29,25 @@
         href="https://fonts.googleapis.com/css?family=Azeret+Mono:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="{{ '/' | url }}assets/css/baguetteBox.min.css">
     <link rel="stylesheet" href="{{ '/' | url }}assets/css/terminal-theme.css">
+    <!-- Add Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Theme transition styles -->
+    <style>
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .card,
+        .btn,
+        .form-control {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .theme-transitioning * {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
     {% block head %}{% endblock %}
 </head>
 
@@ -107,7 +126,10 @@
     <script src="{{ '/' | url }}assets/js/chart-init.js"></script>
     <script src="{{ '/' | url }}assets/js/bs-init.js"></script>
     <script src="{{ '/' | url }}assets/js/baguetteBox.min.js"></script>
+    <script src="{{ '/' | url }}assets/js/project-navigation.js"></script>
     <script src="{{ '/' | url }}assets/js/template.js"></script>
+    <!-- Add theme toggle script -->
+    <script src="{{ '/' | url }}assets/js/theme-toggle.js"></script>
 
     <!-- Terminal typing effect script -->
     <script>
@@ -130,6 +152,19 @@
                 typeWriter();
             });
         });
+    </script>
+
+    <!-- Netlify Identity redirect script -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", (user) => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 
     {% block scripts %}{% endblock %}
