@@ -1,15 +1,16 @@
-:root, [data-bs-theme=light] {
+:root,
+[data-bs-theme=light] {
   --bs-primary: #262424;
-  --bs-primary-rgb: 38,36,36;
+  --bs-primary-rgb: 38, 36, 36;
   --bs-primary-text-emphasis: #0F0E0E;
   --bs-primary-bg-subtle: #D4D3D3;
   --bs-primary-border-subtle: #A8A7A7;
   --bs-body-color: #269c26;
-  --bs-body-color-rgb: 38,156,38;
+  --bs-body-color-rgb: 38, 156, 38;
   --bs-secondary-color: black;
-  --bs-secondary-color-rgb: 0,0,0;
-  --bs-tertiary-color: rgba(52,164,50,0.5);
-  --bs-tertiary-color-rgb: 52,164,50,0.5;
+  --bs-secondary-color-rgb: 0, 0, 0;
+  --bs-tertiary-color: rgba(52, 164, 50, 0.5);
+  --bs-tertiary-color-rgb: 52, 164, 50, 0.5;
 }
 
 .btn-primary {
@@ -19,7 +20,7 @@
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #201F1F;
   --bs-btn-hover-border-color: #1E1D1D;
-  --bs-btn-focus-shadow-rgb: 222,222,222;
+  --bs-btn-focus-shadow-rgb: 222, 222, 222;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #1E1D1D;
   --bs-btn-active-border-color: #1D1B1B;
@@ -31,7 +32,7 @@
 .btn-outline-primary {
   --bs-btn-color: #262424;
   --bs-btn-border-color: #262424;
-  --bs-btn-focus-shadow-rgb: 38,36,36;
+  --bs-btn-focus-shadow-rgb: 38, 36, 36;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #262424;
   --bs-btn-hover-border-color: #262424;
@@ -43,3 +44,36 @@
   --bs-btn-disabled-border-color: #262424;
 }
 
+/* Analytics Chart Styles */
+[data-analytics-chart] {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 95, 215, 0.1);
+}
+
+[data-analytics-chart]:hover {
+  box-shadow: 0 0 15px rgba(255, 95, 215, 0.2);
+}
+
+.refresh-button-container {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.refresh-button-container:hover {
+  opacity: 1;
+}
+
+.api-status {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.api-status a {
+  text-decoration: none;
+  color: var(--bs-primary);
+}
+
+.api-status a:hover {
+  text-decoration: underline;
+}

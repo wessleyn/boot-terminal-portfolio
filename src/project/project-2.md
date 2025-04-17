@@ -1,47 +1,77 @@
 ---
-layout: full-project.njk
-title: "Project: Task Management App - Wessley Nyakanyanga"
-description: "A modern task management application with Kanban-style boards, real-time updates, and team collaboration
-features."
-keywords: "task management, kanban, project management, react, firebase, collaboration tools"
-ogTitle: "Task Management App by Wessley Nyakanyanga"
-ogDescription: "Modern Kanban-style task manager with real-time updates and team collaboration"
-ogImage: "../assets/img/projects/project2.webp"
+layout: with-analytics.njk
+
+title: "Personal Portfolio - Wessley Nyakanyanga"
+description: "Linux terminal-inspired portfolio showcasing projects and skills"
+keywords: "portfolio, linux terminal, data visualization, web development, Nunjucks, Chart.js"
+
+ogTitle: "Personal Portfolio by Wessley Nyakanyanga"
+ogDescription: "Navigate my projects through a custom Linux terminal interface"
+ogImage: "/assets/img/projects/portfolio.png"
 ogUrl: "https://wessleyn.me/projects/project-2.html"
+
 canonical: "https://wessleyn.me/projects/project-2.html"
+
 projectSlug: "project-2"
-projectName: "Task_Management_App"
-projectSummary: "A modern Kanban-style task management application with real-time updates and team collaboration
-features"
-projectImage: "project2.webp"
-projectOverview: "This task management application helps teams organize their workflow with a visual Kanban board
-interface. The app enables real-time collaboration, allowing multiple team members to work simultaneously on projects
-with instant updates."
+projectName: "Personal Portfolio"
+projectSummary: "A Linux terminal inspired portfolio"
+shortDescription: "A statically generated web app"
+projectImage: "portfolio.png"
+
+projectOverview: |
+  Personal Portfolio is a Linux terminal-inspired website that showcases my projects and skills.
+  It features a custom terminal interface that allows users to navigate through my work and learn
+  more about my background. The site now includes live analytics data from Simple Analytics API
+  to demonstrate real-time data visualization capabilities.
+
 technologies:
-- "React"
-- "TypeScript"
-- "Firebase"
-- "Firestore"
-- "React DnD"
-- "Material UI"
-- "Authentication"
-- "Progressive Web App"
+  - Nunjucks
+  - Chart.js
+  - Bootstrap 5
+  - Node.js
+  - HTML & CSS
+  - Simple Analytics API
+  - GitHub Student Pack
+
 features:
-- "Kanban-style boards with customizable columns"
-- "Drag and drop task management"
-- "Real-time updates across all team members"
-- "Task assignment, due dates, and priority setting"
-- "File attachments and comments"
-- "User authentication and role-based permissions"
-- "Activity logs and notifications"
-- "Progressive Web App for offline capability"
+  - Real-time data visualization with live updates from Simple Analytics
+  - Interactive terminal-like interface for project navigation
+  - Dynamic chart rendering with fallback to static data
+  - Responsive design optimized for all device sizes
+  - Automated analytics data refresh capability
+  - Export capabilities for reports and presentations
+
 challenges:
-- "The biggest challenge was implementing real-time synchronization that maintained data consistency across multiple
-users. I solved this using Firebase's real-time database with optimistic UI updates and conflict resolution."
-- "Another challenge was keeping the application responsive despite complex drag-and-drop operations. I implemented
-performance optimizations like windowing and virtualization to handle large boards with hundreds of tasks."
-githubUrl: "https://github.com/wessleyn/task-management"
-demoUrl: "https://example-taskmanager.wessleyn.me"
-prevProject: "project-1"
-nextProject: "project-3"
+  - Implementing real-time data fetching from the Simple Analytics API with proper error handling and fallbacks
+  - Optimizing performance for real-time data updates using WebSocket data batching to minimize browser rendering overhead while keeping visualizations current
+  - Creating responsive and accessible visualizations via a custom theme system that adapts to user preferences and accessibility needs
+
+prevProject: "project-2"
+nextProject: "project-4"
+
+githubUrl: "https://github.com/wessleyn/boot-terminal-portfolio"
+demoUrl: "https://wessleyn.me"
+
+chartType: line
+chartLabels:
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - Jun
+  - Jul
+  - Aug
+chartData:
+  - 120
+  - 145
+  - 205
+  - 275
+  - 310
+  - 340
+  - 420
+  - 485
+chartTitle: "Portfolio Visitors"
+chartColor: "#3e64ff"
+chartDescription: "Visitor statistics for my portfolio showing real-time data pulled from Simple Analytics API. The chart automatically refreshes and displays both visitors and pageviews from the last two days."
 ---

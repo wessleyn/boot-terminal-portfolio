@@ -1,46 +1,53 @@
 ---
 layout: full-project.njk
-title: "Project: E-commerce Platform - Wessley Nyakanyanga"
-description: "An e-commerce platform built with React, Node.js, and MongoDB. Featuring user authentication, product
-management, and payment processing."
-keywords: "e-commerce, web development, react, node.js, mongodb, payment processing"
-ogTitle: "E-commerce Platform by Wessley Nyakanyanga"
-ogDescription: "Full-stack e-commerce website with modern features and responsive design"
-ogImage: "../assets/img/projects/project1.webp"
-ogUrl: "https://wessleyn.me/projects/project-1.html"
-canonical: "https://wessleyn.me/projects/project-1.html"
+
+title: "Project: Student Portal - Wessley Nyakanyanga"
+description: "Comprehensive student portal with course management, grade tracking, and interactive learning features"
+keywords: "student portal, education platform, learning management, React, MongoDB, Express.js, Node.js, Material UI, PWA"
+
+ogTitle: "Student Portal by Wessley Nyakanyanga"
+ogDescription: "Comprehensive learning management system with course tracking and interactive features"
+ogImage: "/assets/img/projects/portal.png"
+ogUrl: "https://wessleyn.me/projects/project-1/"
+
+canonical: "https://wessleyn.me/projects/project-1/"
+
 projectSlug: "project-1"
-projectName: "E-commerce Platform"
-projectSummary: "A full-featured e-commerce platform with user authentication, product management, and payment
-processing"
-projectImage: "project1.webp"
-projectOverview: "This e-commerce platform provides a complete solution for online stores. Built with modern
-technologies, it offers a responsive design that works across devices and includes a robust admin dashboard for
-inventory management."
+projectName: "Student Portal"
+projectSummary: "A comprehensive student portal with course management, grade tracking, and interactive learning features"
+shortDescription: "React LMS platform"
+isPrivate: false
+projectImage: "portal.png"
+
+projectOverview: |
+  This student portal helps educational institutions streamline course management and student engagement.
+  Students can access course materials, submit assignments, and track grades, while educators manage
+  classes, post announcements, and monitor student progress in real time.
+
 technologies:
-- "React"
-- "Node.js"
-- "Express"
-- "MongoDB"
-- "Redux"
-- "JWT Authentication"
-- "Stripe API"
-- "AWS S3"
+  - React
+  - TypeScript
+  - MongoDB
+  - Express.js
+  - Node.js
+  - Material UI
+  - Authentication
+  - Progressive Web App (PWA)
+
 features:
-- "User authentication and profile management"
-- "Product catalog with search and filter capabilities"
-- "Shopping cart and wishlist functionality"
-- "Secure checkout with multiple payment options"
-- "Order tracking and history"
-- "Admin dashboard for product and order management"
-- "Review and rating system"
-- "Responsive design for mobile and desktop"
+  - Course enrollment and management
+  - Assignment submission and grading
+  - Real-time grade tracking and progress reports
+  - Interactive calendar with course schedules
+  - Discussion forums per course
+  - Direct messaging between students and instructors
+  - File storage for course materials
+  - Mobile-responsive design for on-the-go access
+
 challenges:
-- "One of the main challenges was implementing a real-time inventory management system that could handle concurrent
-operations. I solved this by using MongoDB transactions and implementing optimistic concurrency control."
-- "Another challenge was optimizing image loading times for product pages. I implemented lazy loading and set up an
-image CDN using AWS CloudFront to serve optimized images based on the user's device."
-githubUrl: "https://github.com/wessleyn/ecommerce-platform"
-demoUrl: "https://example-ecommerce.wessleyn.me"
-nextProject: "project-2"
+  - Designing a scalable MongoDB schema to support diverse programs and grading systems.
+  - Implementing role-based access control for students, instructors, and administrators without compromising UX.
+
+githubUrl: "https://github.com/wessleyn/student-portal"
+demoUrl: "https://studentportal.wessleyn.me"
 ---

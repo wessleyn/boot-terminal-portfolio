@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: main
@@ -33,3 +35,149 @@ collections:
       - {label: "Demo URL", name: "demoUrl", widget: "string", required: false}
       - {label: "Previous Project", name: "prevProject", widget: "string", required: false}
       - {label: "Next Project", name: "nextProject", widget: "string", required: false}
+      
+      # Mobile App Template Fields (conditional)
+      - label: "App Store URL"
+        name: "appStoreUrl"
+        widget: "string"
+        required: false
+        hint: "URL to the iOS App Store"
+        condition:
+          field: layout
+          value: mobile-app.njk
+      - label: "Google Play URL"
+        name: "playStoreUrl"
+        widget: "string"
+        required: false
+        hint: "URL to the Google Play Store"
+        condition:
+          field: layout
+          value: mobile-app.njk
+      - label: "Main Image"
+        name: "mainImage"
+        widget: "image"
+        required: false
+        hint: "Main image for mobile app display"
+        condition:
+          field: layout
+          value: mobile-app.njk
+      - label: "Gallery Images"
+        name: "galleryImages"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Image", name: "file", widget: "image"}
+          - {label: "Alt Text", name: "alt", widget: "string"}
+        condition:
+          field: layout
+          value: mobile-app.njk
+      - label: "Design Process"
+        name: "designProcess"
+        widget: "markdown"
+        required: false
+        hint: "Description of the app design process"
+        condition:
+          field: layout
+          value: mobile-app.njk
+      - label: "User Feedback"
+        name: "userFeedback"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "User", name: "user", widget: "string"}
+          - {label: "Rating", name: "rating", widget: "number", min: 1, max: 5, value_type: "int"}
+          - {label: "Comment", name: "comment", widget: "text"}
+        condition:
+          field: layout
+          value: mobile-app.njk
+          
+      # Analytics Template Fields (conditional)
+      - label: "Chart Type"
+        name: "chartType"
+        widget: "select"
+        options: ["line", "bar", "pie", "doughnut"]
+        default: "line"
+        hint: "Type of chart to display"
+        required: false
+        condition:
+          field: layout
+          value: with-analytics.njk
+      - label: "Chart Title"
+        name: "chartTitle"
+        widget: "string"
+        required: false
+        hint: "Title for the analytics chart"
+        condition:
+          field: layout
+          value: with-analytics.njk
+      - label: "Chart Labels"
+        name: "chartLabels"
+        widget: "list"
+        required: false
+        hint: "Labels for the chart axis (e.g., ['Jan', 'Feb', 'Mar'])"
+        condition:
+          field: layout
+          value: with-analytics.njk
+      - label: "Chart Data"
+        name: "chartData"
+        widget: "list"
+        field: {label: "Value", name: "value", widget: "number"}
+        required: false
+        hint: "Numeric data for the chart (e.g., [10, 25, 15])"
+        condition:
+          field: layout
+          value: with-analytics.njk
+      - label: "Chart Color"
+        name: "chartColor"
+        widget: "string"
+        required: false
+        default: "#ff5fd7"
+        hint: "Color for the chart (hex code)"
+        condition:
+          field: layout
+          value: with-analytics.njk
+      - label: "Chart Description"
+        name: "chartDescription"
+        widget: "text"
+        required: false
+        hint: "Description of what the chart represents"
+        condition:
+          field: layout
+          value: with-analytics.njk
+          
+      # Client Project Template Fields (conditional)
+      - label: "Client Name"
+        name: "clientName"
+        widget: "string"
+        required: false
+        hint: "Name of the client"
+        condition:
+          field: layout
+          value: client-project.njk
+      - label: "Client Description"
+        name: "clientDescription"
+        widget: "text"
+        required: false
+        hint: "Description of the client's business"
+        condition:
+          field: layout
+          value: client-project.njk
+      - label: "Client Website"
+        name: "clientWebsite"
+        widget: "string"
+        required: false
+        hint: "URL of the client's website"
+        condition:
+          field: layout
+          value: client-project.njk
+      - label: "Testimonial"
+        name: "testimonial"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Quote", name: "quote", widget: "text"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Position", name: "position", widget: "string"}
+        condition:
+          field: layout
+          value: client-project.njk
