@@ -3,8 +3,8 @@ backend:
   repo: wessleyn/boot-terminal-portfolio
   branch: main
   site_url: https://wessleyn.me
-  search: false
-  base_url: https://decap.wessleyn.me
+  base_url: https://wessleyn.me
+  auth_endpoint: /api/auth
 
 media_folder: src/assets/img/projects
 public_folder: /assets/img/projects
