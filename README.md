@@ -1,5 +1,8 @@
 # Bootstrap Terminal Theme Portfolio
+
 A modern, responsive developer portfolio website built with Bootstrap 5, featuring a terminal-inspired theme.
+
+![portfolop](./src/assets/img/projects/portfolio.png)
 
 ## Features
 
