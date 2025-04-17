@@ -7,8 +7,11 @@ backend:
   base_url: https://wessleyn.me
   logo_url: https://wessley.me/assets/img/apple-touch-icon.png
 
-media_folder: src/assets/img/projects
-public_folder: /assets/img/projects
+media_folder: "src/assets/img/projects"
+public_folder: "/assets/img/projects"
+
+media_library:
+  name: default
 
 collections:
   - name: "projects"
