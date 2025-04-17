@@ -2,7 +2,7 @@
 layout: with-analytics.njk
 title: Neon Sun - Analytics Dashboard
 projectName: Neon Sun
-projectSlug: neon-sun
+projectSlug: project-3
 projectSummary: A powerful analytics dashboard for tracking user engagement and app performance
 projectOverview: "Neon Sun is a customizable analytics dashboard designed to visualize user engagement metrics and
 application performance in real-time. The dashboard provides intuitive visual representations of complex data, enabling

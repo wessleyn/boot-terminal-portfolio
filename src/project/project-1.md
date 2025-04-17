@@ -10,7 +10,7 @@ ogImage: "../assets/img/projects/project1.webp"
 ogUrl: "https://wessleyn.me/projects/project-1.html"
 canonical: "https://wessleyn.me/projects/project-1.html"
 projectSlug: "project-1"
-projectName: "E-commerce_Platform"
+projectName: "E-commerce Platform"
 projectSummary: "A full-featured e-commerce platform with user authentication, product management, and payment
 processing"
 projectImage: "project1.webp"

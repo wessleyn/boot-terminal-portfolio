@@ -15,74 +15,22 @@ showHireButton: true
 <h2 class="fs-3 fw-bold text-primary terminal-cursor">$ ls -la ~/projects</h2>
 <p class="mb-4">I build innovative web applications and digital solutions that are
     responsive, accessible, and performant. Check out some of my recent projects below:</p>
-<div class="row gx-4 gy-4">
+<div class="row gx-4 gy-4" role="list">
+    {%- for project in collections.projects -%}
     <div class="col-12 col-sm-6 col-lg-4">
-        <a class="card-link" href="{{ '/' | url }}projects/project-1">
+        <a class="card-link" href="{{ '/' | url }}project/{{ project.data.projectSlug }}">
             <div class="card border-0 shadow-sm">
-                <div class="position-relative"><img class="card-img-top" alt="E-commerce Platform"
-                        src="{{ '/' | url }}assets/img/projects/project1.webp">
+                <div class="position-relative"><img class="card-img-top" alt="{{ project.data.projectName }}"
+                        src="{{ '/' | url }}assets/img/projects/{{ project.data.projectImage }}">
                 </div>
                 <div class="card-body px-3 py-2">
-                    <h3 class="fw-bold text-primary fs-5 mb-0">E-commerce Platform</h3>
-                    <p class="text-muted mb-0">Full-stack online store with user auth,
-                        product management & payment processing</p>
+                    <h3 class="fw-bold text-primary fs-5 mb-0">{{ project.data.projectName }}</h3>
+                    <p class="text-muted mb-0">{{ project.data.projectSummary }}</p>
                 </div>
             </div>
         </a>
     </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-        <a class="card-link" href="{{ '/' | url }}projects/project-2">
-            <div class="card border-0 shadow-sm">
-                <div class="position-relative"><img class="card-img-top" alt="Task Management App"
-                        src="{{ '/' | url }}assets/img/projects/project2.webp">
-                </div>
-                <div class="card-body px-3 py-2">
-                    <h3 class="fw-bold text-primary fs-5 mb-0">Task Management App</h3>
-                    <p class="text-muted mb-0">Modern Kanban-style task manager with
-                        real-time updates & team collaboration</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-        <a class="card-link" href="{{ '/' | url }}projects/project-3">
-            <div class="card border-0 shadow-sm">
-                <div class="position-relative"><img class="card-img-top" alt="Weather Dashboard"
-                        src="{{ '/' | url }}assets/img/projects/project3.webp">
-                </div>
-                <div class="card-body px-3 py-2">
-                    <h3 class="fw-bold text-primary fs-5 mb-0">Weather Dashboard</h3>
-                    <p class="text-muted mb-0">Interactive weather app with location
-                        tracking, forecasts, & custom alerts</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-        <a class="card-link" href="{{ '/' | url }}projects/project-4">
-            <div class="card border-0 shadow-sm">
-                <div class="position-relative"><img class="card-img-top" alt="Fitness Tracker"
-                        src="{{ '/' | url }}assets/img/projects/project4.webp"></div>
-                <div class="card-body px-3 py-2">
-                    <h3 class="fw-bold text-primary fs-5 mb-0">Fitness Tracker</h3>
-                    <p class="text-muted mb-0">Health & fitness app with workout plans,
-                        progress tracking, & data visualization</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-        <a class="card-link" href="{{ '/' | url }}projects/project-5">
-            <div class="card border-0 shadow-sm">
-                <div class="position-relative"><img class="card-img-top" alt="Recipe Finder"
-                        src="{{ '/' | url }}assets/img/projects/project5.webp"></div>
-                <div class="card-body px-3 py-2">
-                    <h3 class="fw-bold text-primary fs-5 mb-0">Recipe Finder</h3>
-                    <p class="text-muted mb-0">Culinary app with recipe search, favorites, &
-                        meal planning functionality</p>
-                </div>
-            </div>
-        </a>
-    </div>
+    {%- endfor %}
 </div>
+
 {% endblock %}

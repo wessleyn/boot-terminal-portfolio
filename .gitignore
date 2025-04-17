@@ -165,4 +165,4 @@ Thumbs.db
 *.sln
 *.sw?
 
-/public
+/_site

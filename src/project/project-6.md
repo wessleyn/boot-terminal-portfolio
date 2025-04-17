@@ -2,7 +2,8 @@
 layout: mobile-app.njk
 title: CalmMind - Meditation App
 projectName: CalmMind
-projectSlug: calmmind
+projectSlug: project-6
+projectImage: project6.webp
 projectSummary: A sleek meditation app focused on mental wellness and mindful practice
 projectOverview: "CalmMind is a meditation app designed to help users find moments of peace throughout their day. With customizable meditation sessions, sleep stories, and breathing exercises, the app offers a comprehensive toolkit for mental wellness."
 mainImage: project4.webp

@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: wessleyn/boot-terminal-portfolio
+  branch: main
+  site_url: https://wessleyn.me
+  search: false
+  base_url: https://decap.wessleyn.me
+
+# Enables user login via GitHub OAuth
+publish_mode: editorial_workflow
+media_folder: "src/assets/img/projects" # Media will be stored in this folder in the repo
+public_folder: "/assets/img/projects" # The public path to media files
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/project"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "select", options: ["full-project.njk", "with-analytics.njk", "mobile-app.njk", "client-project.njk"], default: "full-project.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Project Name", name: "projectName", widget: "string"}
+      - {label: "Project Slug", name: "projectSlug", widget: "string"}
+      - {label: "Project Summary", name: "projectSummary", widget: "text"}
+      - {label: "Project Image", name: "projectImage", widget: "image"}
+      - {label: "Project Overview", name: "projectOverview", widget: "markdown"}
+      - {label: "Technologies", name: "technologies", widget: "list"}
+      - {label: "Features", name: "features", widget: "list"}
+      - {label: "Challenges", name: "challenges", widget: "list"}
+      - {label: "GitHub URL", name: "githubUrl", widget: "string", required: false}
+      - {label: "Demo URL", name: "demoUrl", widget: "string", required: false}
+      - {label: "Previous Project", name: "prevProject", widget: "string", required: false}
+      - {label: "Next Project", name: "nextProject", widget: "string", required: false}
