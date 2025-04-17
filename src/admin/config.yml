@@ -6,10 +6,8 @@ backend:
   search: false
   base_url: https://decap.wessleyn.me
 
-# Enables user login via GitHub OAuth
-publish_mode: editorial_workflow
-media_folder: "src/assets/img/projects" # Media will be stored in this folder in the repo
-public_folder: "/assets/img/projects" # The public path to media files
+media_folder: src/assets/img/projects
+public_folder: /assets/img/projects
 
 collections:
   - name: "projects"
