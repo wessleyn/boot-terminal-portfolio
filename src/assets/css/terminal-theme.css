@@ -106,7 +106,7 @@ a[href^="mailto:"]:hover {
 
 /* Card styling */
 .card {
-    background-color: var(--bs-dark);
+    background-color: transparent;
     border: 1px solid #333;
     transition: all 0.3s ease;
 }
@@ -234,14 +234,13 @@ iframe[title*="challenge"],
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 20px;
-    /* Further increased height for larger cards */
+    height: 350px; /* Maintain the increased height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
         box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    /* Separate transitions */
     will-change: transform;
-    /* Optimize for GPU acceleration */
     cursor: pointer;
-    /* Fixed cursor */
+    background-color: transparent; /* Ensure transparency */
 }
 
 .project-item:hover {
@@ -291,6 +290,116 @@ iframe[title*="challenge"],
     left: 0;
     z-index: 1;
     content: "";
+}
+
+/* Theme toggle styling */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background: rgba(40, 40, 40, 0.7);
+    padding: 5px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(60, 60, 60, 0.9);
+}
+
+.theme-toggle-button {
+    background: none;
+    border: none;
+    color: var(--bs-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+.theme-toggle-icon {
+    margin-right: 8px;
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle-button:hover .theme-toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Light Mode (Solarized Light inspired) Theme */
+[data-theme="light"] {
+    --bs-primary: #268BD2;
+    /* Solarized blue */
+    --bs-primary-rgb: 38, 139, 210;
+    --bs-body-color: #586E75;
+    /* Solarized base01 */
+    --bs-body-bg: #FDF6E3;
+    /* Solarized base3 */
+    --bs-dark: #EEE8D5;
+    /* Solarized base2 */
+    --bs-secondary: #93A1A1;
+    /* Solarized base1 */
+}
+
+[data-theme="light"] body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Light mode card styling */
+[data-theme="light"] .card {
+    background-color: transparent;
+    border: 1px solid #D0D0D0;
+}
+
+/* Light mode form styling */
+[data-theme="light"] .form-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: var(--bs-body-color);
+}
+
+[data-theme="light"] .form-control:focus {
+    background-color: #fff;
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Light mode terminal cursor */
+[data-theme="light"] .terminal-cursor::after {
+    color: var(--bs-primary);
+}
+
+/* Light mode project elements */
+[data-theme="light"] .project-item:hover .card-img {
+    filter: brightness(0.8);
+}
+
+[data-theme="light"] .project-countdown {
+    background-color: rgba(38, 139, 210, 0.9);
+    color: white;
+}
+
+[data-theme="light"] .tech-stack .badge {
+    background-color: var(--bs-primary);
+    color: white !important;
+}
+
+/* Light mode button styling */
+[data-theme="light"] .btn-primary-dragient {
+    background: linear-gradient(45deg, var(--bs-primary), #2AA198, #859900);
+    color: white;
+}
+
+[data-theme="light"] .btn-primary-dragient:hover {
+    background: linear-gradient(45deg, #859900, #2AA198, var(--bs-primary));
 }
 
 /* Project status indicators */

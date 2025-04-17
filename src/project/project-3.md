@@ -13,7 +13,7 @@ canonical: "https://wessleyn.me/projects/project-4.html"
 
 projectSlug: "project-3"
 projectName: "Job Butler"
-projectShortDescription: "An AI-powered job application assistant"
+shortDescription: "An AI-powered job application assistant"
 releaseDate: "May 2025"
 
 projectSummary: "An AI-powered job assistant automating applications while you sleep."
