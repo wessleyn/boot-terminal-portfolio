@@ -23,12 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
     // Clear existing navigation links
     navContainer.innerHTML = "";
 
+    // Determine the URL structure based on current URL path
+    const currentPath = window.location.pathname;
+    const getProjectUrl = (slug) => {
+        // Check if we're in a '/projects/' directory structure
+        if (currentPath.includes('/projects/')) {
+            return `/projects/${slug}`;
+        }
+        // Check if we're in a '/project/' directory structure
+        else if (currentPath.includes('/project/')) {
+            return `/project/${slug}`;
+        }
+        // Default to root level
+        else {
+            return `/${slug}`;
+        }
+    };
+
     // Add previous project link if not the first project
     if (currentIndex > 0) {
         const prevSlug = projectOrder[currentIndex - 1];
         const prevLink = document.createElement('a');
-        prevLink.href = `/${prevSlug}`;
+        prevLink.href = getProjectUrl(prevSlug);
         prevLink.className = 'btn btn-outline-primary';
+        prevLink.setAttribute('role', 'button'); // Improve accessibility and clickability
         prevLink.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
           class="bi bi-arrow-left me-2">
@@ -48,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentIndex < projectOrder.length - 1) {
         const nextSlug = projectOrder[currentIndex + 1];
         const nextLink = document.createElement('a');
-        nextLink.href = `/${nextSlug}`;
+        nextLink.href = getProjectUrl(nextSlug);
         nextLink.className = 'btn btn-primary-dragient';
+        nextLink.setAttribute('role', 'button'); // Improve accessibility and clickability
         nextLink.innerHTML = `
       Next Project
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
