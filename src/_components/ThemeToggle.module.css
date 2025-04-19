@@ -1,0 +1,52 @@
+.themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.themeToggleButton {
+    display: flex;
+    align-items: center;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    border: 1px solid var(--bs-gray-700);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: var(--bs-font-monospace);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.themeToggleButton:hover {
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-600);
+}
+
+.themeToggleIcon {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.themeToggleText {
+    white-space: nowrap;
+}
+
+/* Animation for theme transitions */
+:global(.theme-transitioning) {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Adjustments for light theme */
+[data-theme='light'] .themeToggleButton {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+    border-color: var(--bs-gray-300);
+}
+
+[data-theme='light'] .themeToggleButton:hover {
+    background-color: var(--bs-gray-200);
+    border-color: var(--bs-gray-400);
+}

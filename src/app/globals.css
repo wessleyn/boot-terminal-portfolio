@@ -1,0 +1,6 @@
+/* Existing CSS styles */
+
+/* Import Bootstrap CSS properly */
+@import url('../_styles/bootstrap.min.css');
+@import url('../_styles/baguetteBox.min.css');
+@import url('../_styles/terminal-theme.css');
